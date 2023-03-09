@@ -61,3 +61,59 @@ body {
     padding: 10px;
 
 }
+.credentials {
+    position: center;
+    margin-left: 37%;
+
+
+    
+}
+.AppBody {
+    font-family: sans-serif;
+    font-size: large;
+    font-style: italic;
+    color: White;
+    margin-left: 115px;
+    
+}
+.explorer{
+    margin-left: 23%;
+    margin-top: 2%;
+
+
+}
+.speech-bubble {
+    position: relative;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    margin-left: 430px;
+    margin-top: 3%;
+}
+
+.speech-bubble:before, .speech-bubble:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    rotate: 180deg;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #fff transparent;
+    transform: translate(-150%, -735%);
+}
+
+.speech-bubble:before {
+    top: -10px;
+}
+
+.speech-bubble:after {
+    border-width: 0 12px 12px 12px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.3) transparent;
+    top: -12px;
+}
+
