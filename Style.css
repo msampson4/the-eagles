@@ -1,35 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    height:120px;
+    font-size: 13px;
+    color:#f2f2f2;
+    padding: 5px;
+
+
+
+}
+
 .collaborators {
     float: right;
     margin-top: -120px ;
     color: red;
 }
-header{
-    height: 100%;
-    position: absolute;
 
-}
-.topnav a {
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 12px 14px;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
-.topnav-right {
-    float: right;
-}
 
 .header {
     padding: 20px;
@@ -38,7 +27,7 @@ header{
     color: white;
     font-size: 16px;
 }
-.topnav a {
+.topNav a {
     float: right;
     color: #f2f2f2;
     text-align: center;
@@ -47,27 +36,57 @@ header{
     font-size: 17px;
 }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
+.topNav a:hover {
+    background-color: #f2f2f2;
+    color: #333333;
 }
 
-.topnav a.active {
+.topNav a:active {
     background-color: #04AA6D;
     color: white;
 }
 
-.topnav-right {
-    float: right;
-}
-.footer{
-    position: relative;
-    : saddlebrown;
-    width: 100%;
-}
+
 h2{
     text-decoration-line: underline;
 }
-body{
+html, body{
+    height: 100%;
     background-color: #333333;
+    margin: 0;
+}
+.content{
+    min-height: 88.4%;
+    margin-bottom: -50px;
+}
+.button{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: red;
+}
+
+footer{
+    height: 50px;
+    width: 100%;
+
+}
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+}
+.column p {
+    font-size: 17px;
+    color:white;
+}
+.content2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    color:aliceblue;
 }
