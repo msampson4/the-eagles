@@ -1,0 +1,53 @@
+.header {
+    padding: 10px;
+    text-align: left;
+    background: saddlebrown;
+    color: white;
+    font-size: 10px;
+}
+.topNav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #333333;
+}
+
+.topNav a:hover {
+    background-color: #f2f2f2;
+    color: #333333;
+}
+body{
+    background-color: black;
+}
+p{
+    color: #f2f2f2;
+}
+footer{
+    height: 50px;
+    width: 100%;
+
+}
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+}
+.column p {
+    font-size: 17px;
+    color:white;
+}
+* {
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    height:120px;
+    font-size: 13px;
+    color:#f2f2f2;
+    padding: 5px;
+}
