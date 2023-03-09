@@ -88,5 +88,8 @@ footer{
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 18px;
-    color:aliceblue;
+    color:#f2f2f2;
+    background-color: #333333;
+    padding: 10px;
+
 }
