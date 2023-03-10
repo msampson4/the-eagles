@@ -29,11 +29,12 @@
 }
 .topNav a {
     float: right;
-    color: black;
+    color: #f2f2f2;
     text-align: center;
     padding: 12px 14px;
     text-decoration: none;
     font-size: 17px;
+    background-color: #333333;
 }
 
 .topNav a:hover {
