@@ -1,4 +1,3 @@
-/* Header */
 .header {
     padding: 10px;
     text-align: left;
@@ -20,19 +19,54 @@
     background-color: #f2f2f2;
     color: #333333;
 }
-/* Main Body */
 body {
     background-color: #5A5A5A;
 }
 * {
     box-sizing: border-box;
 }
+.column {
+    float: left;
+    width: 33.33%;
+    height:120px;
+    font-size: 13px;
+    color:#f2f2f2;
+    padding: 5px;
+
+
+
+}footer{
+    height: 50px;
+    width: 100%;
+
+}
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+}
+.column p {
+    font-size: 17px;
+    color:white;
+}
+.content2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    color:#f2f2f2;
+    background-color: #333333;
+    padding: 10px;
+
+}
 .credentials {
     position: center;
     margin-left: 37%;
 
 
-
+    
 }
 .AppBody {
     font-family: sans-serif;
@@ -40,7 +74,7 @@ body {
     font-style: italic;
     color: White;
     margin-left: 115px;
-
+    
 }
 .explorer{
     margin-left: 23%;
@@ -83,41 +117,3 @@ body {
     top: -12px;
 }
 
-/* Footer */
-.footer{
-    height: 50px;
-    width: 100%;
-
-}
-.column {
-    float: left;
-    width: 33.33%;
-    height: 120px;
-    font-size: 13px;
-    color: #f2f2f2;
-    padding: 5px;
-}
-
-
-@media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-    }
-
-
-}
-.column p {
-    font-size: 17px;
-    color:white;
-}
-.content2{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 18px;
-    color:#f2f2f2;
-    background-color: #333333;
-    padding: 10px;
-
-}
