@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List </title>
+</head>
+<body>
+
+<ul id="treasureHunts"></ul>
+
+<script>
+
+    const treasureHuntsList = document.getElementById("treasureHunts");
+
+    const params = new URLSearchParams(location.search);
+    let name = params.get("name");
+    console.log(name);
+
+    const URL = "https://codecyprus.org/th/api/list";
+  fetch(URL)
+          .then(response => response.json())
+          .then(jsonObject => {
+            if (jsonObject.status === "OK") {
+                const treasureHunts = jsonObject.treasureHunts;
+                for (let i = 0; i < treasureHunts.length; i++) {
+                    let newItem = document.createElement("li");
+                    newItem.innerHTML = "<a href='start.html?playerName=" + name + "&treasureHuntID=" + treasureHunts[i].uuid + "'>" + treasureHunts[i].name + " </a>";
+                    treasureHuntsList.appendChild(newItem);
+                    // console.log(treasureHunts[i].name);
+                }
+            }
+          });
+</script>
+
+</body>
+</html>

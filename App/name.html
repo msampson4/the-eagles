@@ -8,7 +8,7 @@
     <div class="topNav">
     <a href="../Scoreboard/Scoreboard.html">Scoreboard</a>
     <a href="../Notes/Notes.html">Notes</a>
-    <a href="../App/app.html">App</a>
+    <a href="../App/name.html">App</a>
     <a href="../index/index.html">Home</a>
 </div>
 </head>
@@ -28,12 +28,20 @@
 <p></p>
 </div>
 <div class="speech-bubble">
-    <button class="button2" onclick="location.href='../App/app.html';">Start!!</button>
+    <button class="button2" onclick="proceed()">Start!!</button>
 </div>
 <div class="explorer">
     <img src="/images/explorer.png" alt="explorer" height="200px" width="160px">
 
 </div>
+
+<script>
+    function proceed() {
+        let nameField = document.getElementById("Name");
+        let name = nameField.value;
+        location.href='../list.html?name=' + name;
+    }
+</script>
 
 <footer>
     <div class="column" style="background-color:saddlebrown;">
