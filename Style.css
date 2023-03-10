@@ -1,24 +1,6 @@
-* {
-    box-sizing: border-box;
-}
-.column {
-    float: left;
-    width: 33.33%;
-    height:120px;
-    font-size: 13px;
-    color:#f2f2f2;
-    padding: 5px;
 
 
-
-}
-
-.collaborators {
-    float: right;
-    margin-top: -120px ;
-    color: red;
-}
-
+/* Header */
 
 .header {
     padding: 20px;
@@ -47,6 +29,7 @@
     color: white;
 }
 
+/* Body */
 
 h2{
     text-decoration-line: underline;
@@ -67,6 +50,8 @@ html, body{
     transform: translate(-50%,-50%);
     color: red;
 }
+
+/* Footer */
 
 footer{
     height: 50px;
@@ -93,4 +78,24 @@ footer{
     background-color: #333333;
     padding: 10px;
 
+}
+.column {
+    float: left;
+    width: 33.33%;
+    height:120px;
+    font-size: 13px;
+    color:#f2f2f2;
+    padding: 5px;
+
+
+
+}
+
+.collaborators {
+    float: right;
+    margin-top: -120px ;
+    color: red;
+}
+* {
+    box-sizing: border-box;
 }
