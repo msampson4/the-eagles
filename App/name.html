@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Head -->
     <meta charset="UTF-8">
     <title>App</title>
     <link rel="stylesheet" href="../App/app.css">
@@ -9,18 +8,16 @@
     <div class="topNav">
     <a href="../Scoreboard/Scoreboard.html">Scoreboard</a>
     <a href="../Notes/Notes.html">Notes</a>
-    <a href="../App/app.html">App</a>
+    <a href="../App/name.html">App</a>
     <a href="../index/index.html">Home</a>
 </div>
 </head>
 <body>
-<!-- Header -->
 <div class="header">
 
     <img src="/images/pngegg.png" alt="Treasure Hunt" style="width:70px; height:70px;">
     <p>Treasure Hunt</p>
 </div>
-<!-- Main Body -->
 <div class="AppBody">
 <p>Are you ready to join this adventure and be the bearer of the goods?</p>
 <p>Add your credentials to begin the hunt! </p>
@@ -31,13 +28,21 @@
 <p></p>
 </div>
 <div class="speech-bubble">
-    <button class="button2" onclick="location.href='../App/app.html';">Start!!</button>
+    <button class="button2" onclick="proceed()">Start!!</button>
 </div>
 <div class="explorer">
     <img src="/images/explorer.png" alt="explorer" height="200px" width="160px">
 
 </div>
-<!-- Footer -->
+
+<script>
+    function proceed() {
+        let nameField = document.getElementById("Name");
+        let name = nameField.value;
+        location.href='../list.html?name=' + name;
+    }
+</script>
+
 <footer>
     <div class="column" style="background-color:saddlebrown;">
         <h2>Follow us on:</h2>
