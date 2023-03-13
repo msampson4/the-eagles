@@ -9,8 +9,6 @@
     color:#f2f2f2;
     padding: 5px;
 
-
-
 }
 
 .collaborators {
@@ -71,7 +69,7 @@ html, body{
 footer{
     height: 50px;
     width: 100%;
-
+    position:sticky;
 }
 @media screen and (max-width: 600px) {
     .column {
