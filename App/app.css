@@ -83,11 +83,7 @@ footer{
     margin-top: 138px;
 }
 .speech-bubble {
-
-    background-color: #fff;
     padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     width: 90px;
     position: absolute;
     top: 47%;
