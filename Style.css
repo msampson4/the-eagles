@@ -51,7 +51,7 @@ h2{
 }
 html, body{
     height: 100%;
-    background-color: #333333;
+    background-color: #5A5A5A;
     margin: 0;
 }
 .content{
@@ -60,7 +60,7 @@ html, body{
 }
 .button{
     position: absolute;
-    top: 58%;
+    top: 63%;
     left: 50%;
     transform: translate(-50%,-50%);
     color: red;
@@ -83,12 +83,21 @@ footer{
 }
 .content2{
     position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    color:#f2f2f2;
+    background-color: #333333;
+    padding: 5px;
+}
+.content3{
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 18px;
     color:#f2f2f2;
     background-color: #333333;
-    padding: 10px;
-
+    padding: 5px;
 }

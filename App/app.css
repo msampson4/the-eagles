@@ -80,7 +80,7 @@ footer{
 }
 .explorer{
     margin-left: 5%;
-    margin-top: 130px;
+    margin-top: 138px;
 }
 .speech-bubble {
 
@@ -90,11 +90,15 @@ footer{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     width: 90px;
     position: absolute;
-    top: 50%;
-    left: 55%;
+    top: 47%;
+    left: 50%;
     transform: translate(-50%,-50%);
 }
-
+html, body{
+    height: 100%;
+    background-color: #5A5A5A;
+    margin: 0;
+}
 
 
 .speech-bubble:before {
@@ -109,4 +113,7 @@ footer{
 .button2{
     font-size: 20px;
     background-color: coral;
+}
+h2{
+    text-decoration-line: underline;
 }

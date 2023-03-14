@@ -1,9 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    height:120px;
+    font-size: 13px;
+    color:#f2f2f2;
+    padding: 5px;
+
+}
+
+
+
 .header {
     padding: 10px;
     text-align: left;
     background: saddlebrown;
     color: white;
-    font-size: 10px;
+    font-size: 14px;
 }
 .topNav a {
     float: right;
@@ -19,37 +34,41 @@
     background-color: #f2f2f2;
     color: #333333;
 }
-body{
+
+.topNav a:active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+h2{
+    text-decoration-line: underline;
+}
+html, body{
+    height: 100%;
     background-color: #5A5A5A;
+    margin: 0;
 }
-p{
-    color: #f2f2f2;
-}
+
 footer{
     height: 50px;
     width: 100%;
-
+    position:sticky;
 }
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
-
     }
 
 }
-
 .column p {
     font-size: 17px;
     color:white;
 }
-* {
-    box-sizing: border-box;
+
+p{
+    color: #f2f2f2;
 }
-.column {
-    float: left;
-    width: 33.33%;
-    height:120px;
-    font-size: 13px;
-    color:#f2f2f2;
-    padding: 5px;
+#treasureHunts{
+
 }
