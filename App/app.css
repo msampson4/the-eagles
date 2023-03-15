@@ -33,11 +33,11 @@ body {
     color:#f2f2f2;
     padding: 5px;
 
-
-
-}footer{
-    height: 5 0px;
+}
+footer{
+    height: 50px;
     width: 100%;
+    position: sticky;
 
 }
 @media screen and (max-width: 600px) {
@@ -62,50 +62,40 @@ body {
 
 }
 .credentials {
-    position: center;
-    margin-left: 30%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 
 
     
 }
 .AppBody {
     font-family: sans-serif;
-    font-size: large;
+    font-size: 15px;
     font-style: italic;
     color: White;
-    margin-left: 115px;
+    margin-left: 50px;
     
 }
 .explorer{
-    margin-left: 23%;
-    margin-top: 2%;
-
-
+    margin-left: 5%;
+    margin-top: 138px;
 }
 .speech-bubble {
-    position: relative;
-    background-color: #fff;
     padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     width: 90px;
-    margin-left: 430px;
-    margin-top: 3%;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+html, body{
+    height: 100%;
+    background-color: #5A5A5A;
+    margin: 0;
 }
 
-.speech-bubble:before, .speech-bubble:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    rotate: 180deg;
-    border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent #fff transparent;
-    transform: translate(-150%, -735%);
-}
 
 .speech-bubble:before {
     top: -10px;
@@ -119,4 +109,7 @@ body {
 .button2{
     font-size: 20px;
     background-color: coral;
+}
+h2{
+    text-decoration-line: underline;
 }
