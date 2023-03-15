@@ -1,9 +1,8 @@
 .header {
-    padding: 10px;
     text-align: left;
     background: saddlebrown;
     color: white;
-    font-size: 10px;
+    font-size: 15px;
 }
 .topNav a {
     float: right;
@@ -66,13 +65,11 @@ footer{
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
-
-
-    
+    color: #f2f2f2;
 }
 .AppBody {
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     font-style: italic;
     color: White;
     margin-left: 50px;
@@ -80,7 +77,7 @@ footer{
 }
 .explorer{
     margin-left: 5%;
-    margin-top: 138px;
+    margin-top: 143px;
 }
 .speech-bubble {
     padding: 10px;
