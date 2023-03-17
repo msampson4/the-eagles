@@ -20,12 +20,19 @@
 
 </div>
 <p class="text">
-    First you have to choose which hunt you want to play
+    First you have to choose which hunt you want to play.
 </p>
 <div class="explorer">
     <img src="/images/explorer.png" alt="explorer" height="125px" width="125px">
 
 </div>
+<style>
+    body {
+        background-image: url("../the-eagles/images/10220-15_530-b.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
 
 
 <ul id="treasureHunts"></ul>
@@ -48,10 +55,45 @@
                     let newItem = document.createElement("li");
                     newItem.innerHTML = "<a href='start.html?playerName=" + name + "&treasureHuntID=" + treasureHunts[i].uuid + "'>" + treasureHunts[i].name + " </a>";
                     treasureHuntsList.appendChild(newItem);
-                    // console.log(treasureHunts[i].name);
+                    console.log(treasureHunts[i].name);
                 }
             }
           });
+
+
+    async function doList() {
+
+        // call the web service and await for the reply to come back and be converted to JSON
+        const reply = await fetch(URL + "list");
+        const json = await reply.json();
+
+        // identify the spinner, if available, using the id 'loader'...
+        let spinner = document.getElementById("loader");
+        // .. and stop it (by hiding it)
+        spinner.hidden = true;
+
+        // access the "treasureHunts" array on the reply message
+        let treasureHuntsArray = json.treasureHunts;
+        let listHtml = "list.html"; // dynamically form the HTML code to display the list of treasure hunts
+        for(let i = 0; i < treasureHuntsArray.length; i++) {
+            listHtml += // each treasure hunt item is shown with an individual DIV element
+                "<li>" +
+                "<b>" + treasureHuntsArray[i].name + "</b><br/>" + // the treasure hunt name is shown in bold...
+                "<i>" + treasureHuntsArray[i].description + "</i><br/>" + // and the description in italics in the following line
+                "<a href=\"javascript:select(\'" + treasureHuntsArray[i].uuid + "\')\">Start</a>" + // and the description in italics in the following line
+                "</li>";
+        }
+        listHtml += "</ul>";
+        // update the DOM with the newly created list
+        document.getElementById("treasureHunts").innerHTML = listHtml;
+    }
+
+    async function select(uuid) {
+        // For now just print the selected treasure hunt's UUID. Normally, you're expected to guide the user in entering
+        // their name etc. and proceed to calling the '/start' command of the API to start a new session.
+        console.log("Selected treasure hunt with UUID: " + uuid);
+        //
+    }
 </script>
 <footer>
     <div class="column" style="background-color:saddlebrown;">
