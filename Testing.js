@@ -11,7 +11,7 @@ function testlist(list)
         console.log("The list has more than 1 available games.");
     }
 }
-const
+
 function testGameStart(game)
     {
     if (game.state !== "Start")

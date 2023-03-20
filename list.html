@@ -8,7 +8,7 @@
     <div class="topNav">
         <a href="../the-eagles/Testing.html">Testing</a>
         <a href="../the-eagles/Notes/Notes.html">Notes</a>
-        <a href="../the-eagles/App/name.html">App</a>
+        <a href="App/name.html">App</a>
         <a href="../the-eagles/index/index.html">Home</a>
     </div>
 </head>
@@ -19,6 +19,8 @@
     <p>Treasure Hunt</p>
 
 </div>
+<a href="#main" class="skip">Skip to main content</a>
+<main id="main">
 <p class="text">
     First you have to choose which hunt you want to play.
 </p>
@@ -61,39 +63,7 @@
           });
 
 
-    async function doList() {
 
-        // call the web service and await for the reply to come back and be converted to JSON
-        const reply = await fetch(URL + "list");
-        const json = await reply.json();
-
-        // identify the spinner, if available, using the id 'loader'...
-        let spinner = document.getElementById("loader");
-        // .. and stop it (by hiding it)
-        spinner.hidden = true;
-
-        // access the "treasureHunts" array on the reply message
-        let treasureHuntsArray = json.treasureHunts;
-        let listHtml = "list.html"; // dynamically form the HTML code to display the list of treasure hunts
-        for(let i = 0; i < treasureHuntsArray.length; i++) {
-            listHtml += // each treasure hunt item is shown with an individual DIV element
-                "<li>" +
-                "<b>" + treasureHuntsArray[i].name + "</b><br/>" + // the treasure hunt name is shown in bold...
-                "<i>" + treasureHuntsArray[i].description + "</i><br/>" + // and the description in italics in the following line
-                "<a href=\"javascript:select(\'" + treasureHuntsArray[i].uuid + "\')\">Start</a>" + // and the description in italics in the following line
-                "</li>";
-        }
-        listHtml += "</ul>";
-        // update the DOM with the newly created list
-        document.getElementById("treasureHunts").innerHTML = listHtml;
-    }
-
-    async function select(uuid) {
-        // For now just print the selected treasure hunt's UUID. Normally, you're expected to guide the user in entering
-        // their name etc. and proceed to calling the '/start' command of the API to start a new session.
-        console.log("Selected treasure hunt with UUID: " + uuid);
-        //
-    }
 </script>
 <footer>
     <div class="column" style="background-color:saddlebrown;">

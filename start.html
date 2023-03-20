@@ -6,5 +6,30 @@
 </head>
 <body>
 
+
+<script>
+    let app_name = "team_7";
+
+    const params  = new URLSearchParams(location.search);
+    let name = params.get("playerName");
+    let link_id = params.get("treasureHuntID");
+
+    const url_question="https://codecyprus.org/th/api/start?player=" +name+ "&app="+app_name+"&treasure-hunt-id="+link_id;
+    fetch(url_question)
+        .then(response => response.json())
+        .then(jsonObject => {
+            console.log(jsonObject);
+            if (jsonObject.status === "OK") {
+                const start_id = jsonObject.session;
+                localStorage.setItem("session-id", start_id);
+                location.href = "App/Question.html";
+            }
+            else {
+                alert("Error: " + jsonObject.errorMessages[0]);
+            }
+        });
+
+</script>
+
 </body>
 </html>

@@ -47,6 +47,10 @@
         let nameField = document.getElementById("Name");
         let name = nameField.value;
         location.href='../list.html?name=' + name;
+        if (start === ''){
+            alert('Please enter a valid username to continue');
+            return 0;
+        }
     }
 </script>
 

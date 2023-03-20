@@ -14,7 +14,6 @@
 
 
 .header {
-    padding: 10px;
     text-align: left;
     background: saddlebrown;
     color: white;
@@ -81,7 +80,7 @@ p{
 }
 .explorer{
     margin-left: 2%;
-    margin-top: 81px;
+    margin-top: 116px;
 }
 .text{
     background-color: #fff;
@@ -93,7 +92,7 @@ p{
     color:black ;
     text-align: center;
     position: absolute;
-    top: 26%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
 }

@@ -8,11 +8,38 @@
     <div class="topNav">
         <a href="../the-eagles/Testing.html">Testing</a>
         <a href="../the-eagles/Notes/Notes.html">Notes</a>
-        <a href="../the-eagles/App/name.html">App</a>
+        <a href="App/name.html">App</a>
         <a href="../the-eagles/index/index.html">Home</a>
     </div>
 </head>
 <body>
+<button onclick="getQuestion()"
+<script>
+    const URL= "http://www.codecyprus.org/th/testing"
+    fetch(URL)
+        .then(response => response.json())
+        .then (jsonObject=> console.log(jsonObject))
+             if (jsonObject.status ==="OK"){
+                 console.log(jsonObject.questionText);
+             }
+             else{
+                 console.log("unable to get question");
+             });
+    .catch(error=> {
+        console.log("Error, No connection");
+    });
+</script>
+
+
+
+
+
+<div class="header">
+
+    <img src="/images/pngegg.png" alt="Treasure Hunt" style="width:70px; height:70px;">
+    <p>Treasure Hunt</p>
+</div>
+
 <style>
     body {
         background-image: url("../the-eagles/images/10220-15_530-b.jpg");
@@ -20,13 +47,6 @@
         background-repeat: no-repeat;
     }
 </style>
-<div class="header">
-
-    <img src="/images/pngegg.png" alt="Treasure Hunt" style="width:70px; height:70px;">
-    <p>Treasure Hunt</p>
-</div>
-
-
 <footer>
     <div class="column" style="background-color:saddlebrown;">
         <h2>Follow us on:</h2>

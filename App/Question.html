@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 1</title>
+    <link rel="stylesheet" href="Question.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div class="topNav">
+        <a href="../Testing.html">Testing</a>
+        <a href="../Notes/Notes.html">Notes</a>
+        <a href="name.html">App</a>
+        <a href="../index/index.html">Home</a>
+    </div>
+</head>
+<body>
+
+<div class="header">
+
+    <img src="/images/pngegg.png" alt="Treasure Hunt" style="width:70px; height:70px;">
+    <p>Treasure Hunt</p>
+</div>
+
+<div>
+    <p id="questionText"></p>
+    <p>Answer: <input type="text" id="answerField" /></p>
+    <p><input type="button" value="Submit" onclick="answerQuestion(document.getElementById('answerField').value)" /></p>
+</div>
+
+<div class="explorer">
+    <img src="/images/explorer.png" alt="explorer" height="150px" width="150px">
+
+</div>
+<style>
+    body {
+        background-image: url("../images/10220-15_530-b.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+
+<footer>
+    <div class="column" style="background-color:saddlebrown;">
+        <h2>Follow us on:</h2>
+        <a href="https://www.instagram.com/treasurehuntco1111/">
+            <img src="../images/Instagram_logo_2016.jpg" height="40" width="40"/>
+        </a>
+        <a href="https://twitter.com/huntco1111">
+            <img src="../images/u6qfBBkF_400x400.jpg" height="40" width="40"/>
+        </a>
+        <a href="https://www.tiktok.com/@treasurehuntco1111">
+            <img src="../images/761b5a3f301cbc3cb3a98f9d63169076.png" height="40" width="40"/>
+        </a>
+    </div>
+    <div class="column" style="background-color:saddlebrown;">
+
+
+    </div>
+
+    <div class="column" style="background-color:saddlebrown;">
+        <h2>Collaborators:</h2>
+        <p> Michalis Sampson, Nikolas Papamichael</p>
+        <p> Arsenios Hadjigeorgiou, Constantinos Koliaros</p>
+
+    </div>
+</footer>
+
+<script>
+
+    const questionTextElement = document.getElementById("questionText");
+    const answerFieldElement = document.getElementById("answerField");
+
+    getQuestion();
+
+    function getQuestion() {
+        const URL = "https://codecyprus.org/th/api/question?session=" + localStorage.getItem("session-id");
+        fetch(URL)
+            .then(response => response.json())
+            .then(jsonObject => {
+                if (jsonObject.status === "OK") {
+                    const questionText = jsonObject.questionText;
+                    questionTextElement.innerHTML = questionText;
+                } else {
+                    alert(jsonObject.errorMessages[0]);
+                }
+            });
+    }
+
+
+    function answerQuestion(answer) {
+        if (answer === "" || answer == null) {
+            alert("Please provide an answer!");
+        }
+        else {
+            const URL = "https://codecyprus.org/th/api/answer?session=" + localStorage.getItem("session-id") + "&answer=" + answer;
+            fetch(URL)
+                .then(response => response.json())
+                .then(jsonObject => {
+                   if (jsonObject.status === "OK") {
+                       //SHOW MESSAGE
+                       alert(jsonObject.message);
+
+                       //ADJUST POINTS
+                       //TODO
+
+                       //Clear the input:
+                       answerFieldElement.value = "";
+
+                       if (jsonObject.correct) {
+                           if (jsonObject.completed) {
+                               location.href = "../Scoreboard/Scoreboard.html";
+                           }
+                           else {
+                                //GO TO THE NEXT QUESTION
+                               getQuestion();
+                           }
+                       }
+
+                   }
+                   else {
+                       alert(jsonObject.errorMessages[0]);
+                   }
+                });
+        }
+    }
+
+</script>
+
+</body>
+
+</html>
