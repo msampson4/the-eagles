@@ -47,6 +47,7 @@ html, body{
     height: 100%;
     background-color: #5A5A5A;
     margin: 0;
+
 }
 
 footer{
@@ -68,20 +69,7 @@ footer{
 p{
     color: #f2f2f2;
 }
-#treasureHunts{
-    background-color:cornflowerblue;
-    border-radius: 10px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    font-size: x-large;
-    width: 67%;
-    height: auto;
 
-
-}
-.explorer{
-    margin-left: 2%;
-    margin-top: 116px;
-}
 .text{
     background-color: #fff;
     border-radius: 10px;

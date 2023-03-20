@@ -59,7 +59,7 @@ html, body{
 }
 .button{
     position: absolute;
-    top: 63%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%,-50%);
     color: red;
@@ -82,7 +82,7 @@ footer{
 }
 .content2{
     position: absolute;
-    top: 55%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 18px;
@@ -92,11 +92,12 @@ footer{
 }
 .content3{
     position: absolute;
-    top: 50%;
+    top: 37%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 18px;
+    font-size: 16px;
     color:#f2f2f2;
     background-color: #333333;
     padding: 5px;
+
 }
