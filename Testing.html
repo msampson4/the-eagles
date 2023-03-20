@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Treasure hunt testing</title>
     <link rel="stylesheet" href="../the-eagles/Style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="topNav">
@@ -13,7 +13,8 @@
     </div>
 </head>
 <body>
-<button onclick="getQuestion()"
+<button onclick="getQuestion()">
+</button>
 <script>
     const URL= "http://www.codecyprus.org/th/testing"
     fetch(URL)
@@ -22,9 +23,9 @@
              if (jsonObject.status ==="OK"){
                  console.log(jsonObject.questionText);
              }
-             else{
+             else {
                  console.log("unable to get question");
-             });
+             }``
     .catch(error=> {
         console.log("Error, No connection");
     });
@@ -47,6 +48,22 @@
         background-repeat: no-repeat;
     }
 </style>
+<h2>Unit Tests</h2>
+
+<p>The Unit Tests make use of the corresponding Testing API available at <a href="https://codecyprus.org/th/testing" target="_blank">https://codecyprus.org/th/testing</a>.</p>
+<div id="loader" class="loader" hidden></div>
+
+<h3>Testing <code>/list</code></h3>
+
+<button id="buttonTestList" class="button" onclick="mylist(this)">Run Test</button>
+<button id="buttonClearList" class="button" onclick="document.getElementById('treasureHunts').innerHTML = 'The results of the test to show up here...';">Clear</button>
+
+<h4>Testing <code>/start</code></h4>
+
+<button id="buttonTestStart" class="button" onclick="mystart(this)">Run Test</button>
+<button id="buttonClearStart" class="button" onclick="document.getElementById('treasureHunts').innerHTML = 'The results of the test to show up here...';">Clear</button>
+
+<hr>
 <footer>
     <div class="column" style="background-color:saddlebrown;">
         <h2>Follow us on:</h2>
@@ -72,6 +89,5 @@
 
     </div>
 </footer>
-
 </body>
 </html>
