@@ -1,4 +1,4 @@
-const mylist =['Hello' , 'Avatar' , 'Basketball'];
+const mylist =[];
 testlist(mylist)
 function testlist(list)
     {
@@ -50,11 +50,6 @@ TestParameter(myparameter)
         console.log('Multiple error messages of the form', 'Missing or empty parameter');
     }
     return parameter;
-    }
-const myquestion =[]
-TestQuestion(myquestion)
-function TestQuestion(){
-
 }
 
 
@@ -70,6 +65,28 @@ function TestAnswers(corectAnswers , userAnswers) {
     });
     return numCorrect;
 }
+const questions = [];
+
+function selectQuestion() {
+    const index = Math.floor(Math.random() * questions.length);
+    return questions[index];
+}
+function testQuestions() {
+    for (let i = 0; i < questions.length; i++) {
+        const question = questions[i];
+        console.log('Question ${i+1}: ${question.question}');
+        console.log('Answer: ${question.answer}');
+        const playerAnswer = prompt("Enter your answer:");
+        if (playerAnswer.toLowerCase() === question.answer.toLowerCase()) {
+            console.log("Correct!");
+        } else {
+            console.log("Incorrect. Try again.");
+            i--; // decrement i so that the same question is asked again
+        }
+    }
+}
+testQuestions();
+
 
 
 
