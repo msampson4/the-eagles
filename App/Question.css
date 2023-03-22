@@ -26,7 +26,7 @@
 .column {
     float: left;
     width: 33.33%;
-    height:120px;
+    height:100px;
     font-size: 13px;
     color:#f2f2f2;
     padding: 5px;
@@ -36,6 +36,7 @@ footer{
     height: 50px;
     width: 100%;
     position: sticky;
+
 
 }
 @media screen and (max-width: 600px) {
@@ -78,7 +79,7 @@ footer{
 }
 .explorer{
     margin-left: 5%;
-    margin-top: 138px;
+    margin-top: 220px;
 }
 .speech-bubble {
     padding: 10px;
@@ -110,4 +111,31 @@ html, body{
 }
 h2{
     text-decoration-line: underline;
+}
+#questionText{
+    color: #f2f2f2;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+}
+#answerField {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+input{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.answer{
+    color: #f2f2f2;
+    position: absolute;
+    top: 37%;
+    left: 20%;
+    transform: translate(-50%, -50%);
 }
