@@ -17,8 +17,8 @@ function getname() {
 
 
 }
-getscore();
-function getscore(){
+getScore();
+function getScore(){
 
     const URL ="https://codecyprus.org/th/api/score?session=" + localStorage.getItem("session-id");
     fetch(URL)
