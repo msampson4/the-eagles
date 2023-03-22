@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>List </title>
-    <link rel="stylesheet" href="../the-eagles/Notes/Notes.css">
+    <link rel="stylesheet" href="../the-eagles/Scoreboard/list.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="topNav">
         <a href="Scoreboard/Scoreboard.html">Score</a>
@@ -53,7 +53,7 @@
                 const treasureHunts = jsonObject.treasureHunts;
                 for (let i = 0; i < treasureHunts.length; i++) {
                     let newItem = document.createElement("li");
-                    newItem.innerHTML = "<a href='start.html?playerName=" + name + "&treasureHuntID=" + treasureHunts[i].uuid + "'>" + treasureHunts[i].name + " </a>";
+                    newItem.innerHTML = "<a class='two' href='start.html?playerName=" + name + "&treasureHuntID=" + treasureHunts[i].uuid + "'>" + treasureHunts[i].name + " </a>";
                     treasureHuntsList.appendChild(newItem);
                     console.log(treasureHunts[i].name);
                 }
@@ -63,6 +63,7 @@
 
 
 </script>
+    <br>
 <footer>
     <div class="column" style="background-color:saddlebrown;">
         <h2>Follow us on:</h2>
