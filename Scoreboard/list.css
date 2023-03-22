@@ -69,27 +69,37 @@ footer{
 p{
     color: #f2f2f2;
 }
-#treasureHunts{
+#treasureHunts {
+    display: block;
     border-radius: 10px;
-    font-size: x-large;
-    width: 67%;
-    height: auto;
-    text-decoration: none;
-    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
-
+    font-size: medium;
+    width: 150px;
+    height: 100px;
 }
-#treasureHunts a:link, a:visited {
-    background-color: #f44336;
+
+#treasureHunts a.two:link,
+#treasureHunts a.two:visited {
+    background-color: saddlebrown;
     color: white;
-    padding: 15px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    box-shadow: rgba(204, 102, 0, 0.4) -5px 5px, rgba(204, 102, 0, 0.3) -10px 10px, rgba(202, 102, 0, 0.2) -15px 15px, rgba(204, 102, 0, 0.1) -20px 20px, rgba(204, 102, 0, 0.05) -25px 25px;
 }
 
-#treasureHunts a:hover, a:active {
-    background-color: red;
+#treasureHunts a.two:hover {
+    color: black;
+    background-color: #8B4513;
 }
+
+#treasureHunts a.two:active {
+    background-color: #663300;
+    color: white;
+}
+
+
+
+
 
 
 .explorer{
@@ -109,4 +119,7 @@ p{
     top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+ul{
+    list-style: none;
 }
