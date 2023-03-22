@@ -32,8 +32,23 @@ function getScore(){
             }
         });
 
-
 }
+function calculateRank(score, maxScore, time, totalTime) {
+    // Calculate the percentage of the total score
+    let percentage = (score / maxScore) * 100;
+
+    // Calculate the percentage of the total time
+    let timePercentage = ((totalTime - time) / totalTime) * 100;
+
+    // Combine the two percentages to calculate the final rank
+    let rank = (percentage + timePercentage) / 2;
+
+    // Round the rank to two decimal places
+    rank = rank.toFixed(2);
+
+    return rank;
+}
+
 
 
 
