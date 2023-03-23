@@ -27,8 +27,8 @@ body {
 .column {
     float: left;
     width: 33.33%;
-    height:100px;
-    font-size: 13px;
+    height:110px;
+    font-size: 15px;
     color:#f2f2f2;
     padding: 5px;
 
@@ -61,29 +61,35 @@ footer{
 
 }
 .credentials {
-    position: absolute;
+    margin-top: 40px;
+    color:#f2f2f2;
+
+
+  /*  position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: #f2f2f2;
+    color: #f2f2f2;*/
 }
 .AppBody {
     font-family: sans-serif;
     font-size: 18px;
     font-style: italic;
     color: White;
-    margin-left: 50px;
+    display: inline-block;
+    background-color: rgba(0,0,0, 0.75);
+    border-radius: 10px;
+    padding:  15px;
+    margin-top:20px;
+    max-width: 75%;
+
     
-}
-.explorer{
-    margin-left: 5%;
-    margin-top: 161px;
 }
 .speech-bubble {
     padding: 10px;
     width: 90px;
     position: absolute;
-    top: 47%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -105,7 +111,7 @@ html, body{
 }
 .button2{
     font-size: 20px;
-    background-color: coral;
+    background-color: crimson;
 }
 h2{
     text-decoration-line: underline;

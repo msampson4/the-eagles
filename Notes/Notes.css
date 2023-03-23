@@ -4,20 +4,11 @@
 .column {
     float: left;
     width: 33.33%;
-    height:120px;
+    height:100px;
     font-size: 13px;
     color:#f2f2f2;
     padding: 5px;
 
-}
-
-
-
-.header {
-    text-align: left;
-    background: saddlebrown;
-    color: white;
-    font-size: 14px;
 }
 .topNav a {
     float: right;
@@ -62,11 +53,11 @@ footer{
 
 }
 .column p {
-    font-size: 17px;
+    font-size: 14px;
     color:white;
 }
 
-p{
+.meetings{
     color: #f2f2f2;
 }
 
@@ -84,7 +75,4 @@ p{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.explorer{
-    margin-left: 5%;
-    margin-top: 129px;
-}
+
