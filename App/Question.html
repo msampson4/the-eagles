@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="Question.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="topNav">
-        <a href="/Scoreboard/Scoreboard.html">Score</a>
+        <a href="../Scoreboard/Scoreboard.html">Score</a>
         <a href="" class="skip">Skip</a>
     </div>
 </head>
@@ -36,7 +36,9 @@
         background-repeat: no-repeat;
     }
 </style>
-
+<div id="score">
+Score: 0
+</div>
 <footer>
     <div class="column" style="background-color:saddlebrown;">
         <h2>Follow us on:</h2>
@@ -67,9 +69,8 @@
 
     const questionTextElement = document.getElementById("questionText");
     const answerFieldElement = document.getElementById("answerField");
-
     getQuestion();
-
+    localStorage.setItem("score", "0");
     function getQuestion() {
         const URL = "https://codecyprus.org/th/api/question?session=" + localStorage.getItem("session-id");
         fetch(URL)
@@ -97,10 +98,16 @@
                    if (jsonObject.status === "OK") {
                        //SHOW MESSAGE
                        alert(jsonObject.message);
+                       const scoreAdjustment = jsonObject.scoreAdjustment;
+                       console.log(scoreAdjustment.value);
+                       let score = localStorage.getItem("score");
+                       score = parseInt(score) + parseInt(scoreAdjustment);
+                       console.log("Score", score);
+                       localStorage.setItem("score", score);
+                       document.getElementById("score").innerHTML = "Score: " + score;
 
                        //ADJUST POINTS
                        //TODO
-
                        //Clear the input:
                        answerFieldElement.value = "";
 
@@ -121,6 +128,7 @@
                 });
         }
     }
+
 
 </script>
 

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>List </title>
-    <link rel="stylesheet" href="../the-eagles/Notes/Notes.css">
+    <link rel="stylesheet" href="../the-eagles/Scoreboard/list.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="topNav">
-        <a href="../the-eagles/Testing.html">Testing</a>
+        <a href="Scoreboard/Scoreboard.html">Score</a>
         <a href="../the-eagles/Notes/Notes.html">Notes</a>
-        <a href="App/name.html">App</a>
+        <a href="../the-eagles/Testing.html">Testing</a>
         <a href="../the-eagles/index.html">Home</a>
     </div>
 </head>
@@ -53,7 +53,7 @@
                 const treasureHunts = jsonObject.treasureHunts;
                 for (let i = 0; i < treasureHunts.length; i++) {
                     let newItem = document.createElement("li");
-                    newItem.innerHTML = "<a href='start.html?playerName=" + name + "&treasureHuntID=" + treasureHunts[i].uuid + "'>" + treasureHunts[i].name + " </a>";
+                    newItem.innerHTML = "<a class='two' href='start.html?playerName=" + name + "&treasureHuntID=" + treasureHunts[i].uuid + "'>" + treasureHunts[i].name + " </a>";
                     treasureHuntsList.appendChild(newItem);
                     console.log(treasureHunts[i].name);
                 }
@@ -63,6 +63,7 @@
 
 
 </script>
+    <br>
 <footer>
     <div class="column" style="background-color:saddlebrown;">
         <h2>Follow us on:</h2>
@@ -83,8 +84,8 @@
 
     <div class="column" style="background-color:saddlebrown;">
         <h2>Collaborators:</h2>
-        <p> Michalis Sampson, Nikolas Papamichael</p>
-        <p> Arsenios Hadjigeorgiou, Constantinos Koliaros</p>
+         Michalis Sampson, Nikolas Papamichael<br>
+         Arsenios Hadjigeorgiou, Constantinos Koliaros
 
     </div>
 </footer>
