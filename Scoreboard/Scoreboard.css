@@ -54,6 +54,7 @@ body {
 
 th{
     text-decoration: underline;
+    color: red;
 }
 table {
     font-family: arial, sans-serif;

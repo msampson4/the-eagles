@@ -111,8 +111,9 @@ html, body{
     top: -12px;
 }
 .button2{
-    font-size: 20px;
+    font-size: 18px;
     background-color: crimson;
+    color: white;
 }
 h2{
     text-decoration-line: underline;
