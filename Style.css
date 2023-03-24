@@ -59,7 +59,7 @@ html, body{
 }
 .button{
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%,-50%);
 
@@ -88,7 +88,7 @@ footer{
 }
 .content2{
     position: absolute;
-    top: 57%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 18px;
@@ -98,7 +98,7 @@ footer{
 }
 .content3{
     position: absolute;
-    top: 37%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 16px;
