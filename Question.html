@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="Question.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <div class="topNav">
-        <a href="../Scoreboard/Scoreboard.html">Score</a>
-        <a href="" class="skip">Skip</a>
+        <a href="Scoreboard/Scoreboard.html">Score</a>
+
     </div>
 </head>
 <body>
@@ -30,9 +30,10 @@
         </div>
 
         <p id="questionText"></p>
-        <p style="color:white"> Answer: <input type="text" id="answerField" /></p>
+        <p style="color:white "> Answer: <input type="text" id="answerField" /></p>
 
-        <p><input type="button" value="Submit" onclick="answerQuestion(document.getElementById('answerField').value)" /></p>
+        <p><button id="skip" onclick=skip();>Skip</button>
+            <input type="button" value="Submit" onclick="answerQuestion(document.getElementById('answerField').value)" /></p>
     </div>
 </div>
 
@@ -41,13 +42,18 @@
 
 <style>
     body {
-        background-image: url("../images/3947851-assassins-creed-black-flag-fantasy-fighting-action-stealth-adventure-pirate.jpg");
+        background-image: url("images/3947851-assassins-creed-black-flag-fantasy-fighting-action-stealth-adventure-pirate.jpg");
         background-size: cover;
         background-repeat: no-repeat;
+        background-blend-mode: hard-light;
+    }
+
+
         @media screen and (max-width:800px) {
 
         }
-    }
+
+
 </style>
 
 
@@ -66,6 +72,21 @@
                 if (jsonObject.status === "OK") {
                     const questionText = jsonObject.questionText;
                     questionTextElement.innerHTML = questionText;
+                    if (jsonObject.canBeSkipped == true) {
+                        document.getElementById("skip").style.visibility = "visible";
+                    }
+                    else{
+                        document.getElementById("skip").style.visibility = "hidden";
+
+                    }
+                    if (jsonObject.completed == true) {
+                        location.href = "Scoreboard/Scoreboard.html";
+                    }
+                    else {
+                        //GO TO THE NEXT QUESTION
+                        getQuestion();
+                    }
+
                 } else {
                     alert(jsonObject.errorMessages[0]);
                 }
@@ -98,15 +119,6 @@
                        //Clear the input:
                        answerFieldElement.value = "";
 
-                       if (jsonObject.correct) {
-                           if (jsonObject.completed) {
-                               location.href = "../Scoreboard/Scoreboard.html";
-                           }
-                           else {
-                                //GO TO THE NEXT QUESTION
-                               getQuestion();
-                           }
-                       }
 
                    }
                    else {
@@ -114,6 +126,24 @@
                    }
                 });
         }
+    }
+    function skip () {
+        const URL = "https://codecyprus.org/th/api/skip?session=" + localStorage.getItem("session-id");
+        fetch(URL)
+            .then(response => response.json())
+            .then(jsonObject => {
+                if (jsonObject.status === "OK"){
+                    alert("skipped");
+                    let score = localStorage.getItem("score");
+                    score = parseInt(score) + parseInt(jsonObject.scoreAdjustment);
+                    console.log("scoreAdjustment", jsonObject.scoreAdjustment);
+                    localStorage.setItem("score", score);
+                    document.getElementById("score").innerHTML = "Score: " + score;
+                    getQuestion();
+                }
+            });
+
+
     }
 
 

@@ -88,11 +88,12 @@ footer{
 .speech-bubble {
     padding: 10px;
     width: 90px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    margin-left: 45%;
 }
+
+
+
+
 html, body{
     height: 100%;
     background-color: #5A5A5A;
@@ -116,11 +117,4 @@ html, body{
 h2{
     text-decoration-line: underline;
 }
-.skip {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
+
