@@ -3,41 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Treasure hunt testing</title>
-    <link rel="stylesheet" href="../the-eagles/Style.css">
+    <link rel="stylesheet" href="/testing.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <body>
-
+<h1>Report sample</h1>
 <div class="topNav">
     <a href="/Scoreboard/Scoreboard.html">Score</a>
     <a href="../the-eagles/Notes/Notes.html">Notes</a>
     <a href="../the-eagles/Testing.html">Testing</a>
     <a href="index.html">Home</a>
 </div>
-<button onclick="getQuestion()">
+
 </button>
+<table id="testing" style="color:yellow;">
+    <tr>
+        <th>Problem found</th>
+        <th>Heuristic Violated</th>
+        <th>Task</th>
+        <th>Where did it occur</th>
+        <th>How was it found</th>
+        <th>Severity Rating</th>
+    </tr>
+    <Tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    </Tr>
+    <Tr>
+        <th></th>
+        <th>Heuristic Violated</th>
+        <th>Task</th>
+        <th>Where did it occur</th>
+        <th>How was it found</th>
+        <th>Severity Rating</th>
+    </Tr>
+    <Tr>
+        <th></th>
+        <th>Heuristic Violated</th>
+        <th>Task</th>
+        <th>Where did it occur</th>
+        <th>How was it found</th>
+        <th>Severity Rating</th>
+    </Tr>
+    <Tr>
+        <th></th>
+        <th>Heuristic Violated</th>
+        <th>Task</th>
+        <th>Where did it occur</th>
+        <th>How was it found</th>
+        <th>Severity Rating</th>
+    </Tr>
+    <Tr>
+        <th></th>
+        <th>Heuristic Violated</th>
+        <th>Task</th>
+        <th>Where did it occur</th>
+        <th>How was it found</th>
+        <th>Severity Rating</th>
+    </Tr>
+    <Tr>
+        <th></th>
+        <th>Heuristic Violated</th>
+        <th>Task</th>
+        <th>Where did it occur</th>
+        <th>How was it found</th>
+        <th>Severity Rating</th>
+    </Tr>
+
+</table>
+
 <script>
-    const URL= "http://www.codecyprus.org/th/testing"
-    fetch(URL)
-        .then(response => response.json())
-        .then (jsonObject=> console.log(jsonObject))
-             if (jsonObject.status ==="OK"){
-                 console.log(jsonObject.questionText);
-             }
-             else {
-                 console.log("unable to get question");
-             }``
-    .catch(error=> {
-        console.log("Error, No connection");
-    });
+
+
 </script>
-
-
-
-
-
-
 <style>
     body {
         background-image: url("../the-eagles/images/High_resolution_wallpaper_background_ID_77701678166.jpg");
@@ -45,20 +87,6 @@
         background-repeat: no-repeat;
     }
 </style>
-<h2>Unit Tests</h2>
-
-<p>The Unit Tests make use of the corresponding Testing API available at <a href="https://codecyprus.org/th/testing" target="_blank">https://codecyprus.org/th/testing</a>.</p>
-<div id="loader" class="loader" hidden></div>
-
-<h3>Testing <code>/list</code></h3>
-
-<button id="buttonTestList" class="button" onclick="mylist(this)">Run Test</button>
-<button id="buttonClearList" class="button" onclick="document.getElementById('treasureHunts').innerHTML = 'The results of the test to show up here...';">Clear</button>
-
-<h4>Testing <code>/start</code></h4>
-
-<button id="buttonTestStart" class="button" onclick="mystart(this)">Run Test</button>
-<button id="buttonClearStart" class="button" onclick="document.getElementById('treasureHunts').innerHTML = 'The results of the test to show up here...';">Clear</button>
 
 <hr>
 <footer>
