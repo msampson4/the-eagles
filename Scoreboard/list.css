@@ -86,12 +86,11 @@ p{
     display: inline-block;
     box-shadow: rgba(204, 102, 0, 0.4) -5px 5px, rgba(204, 102, 0, 0.3) -10px 10px, rgba(202, 102, 0, 0.2) -15px 15px, rgba(204, 102, 0, 0.1) -20px 20px, rgba(204, 102, 0, 0.05) -25px 25px;
 }
-@media screen and (max-width:800px) {
- #debatable{
-     margin-left: 1%;
-     margin-top: 10%;
- }
+#debatable{
+ margin-top: 10%;
+ display: inline-block;
 }
+
 #treasureHunts a.two:hover {
     color: white;
     background-color: deeppink;
