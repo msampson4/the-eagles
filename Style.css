@@ -88,13 +88,13 @@ footer{
 }
 .content2{
     position: absolute;
-    top: 60%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 16px;
     color:#f2f2f2;
-    background-color: #333333;
-    padding: 5px;
+    background-color: #5A5A5A;
+    background-color: rgba(0,0,0, 0.75); border-radius: 10px;
 }
 .content3{
     position: absolute;
