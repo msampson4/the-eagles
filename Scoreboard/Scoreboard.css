@@ -1,7 +1,7 @@
 footer{
     height: 50px;
     width: 100%;
-
+    margin-top: 17%;
 
 }
 @media screen and (max-width: 600px) {
@@ -11,7 +11,7 @@ footer{
 
 }
 .column p {
-    font-size: 17px;
+    font-size: 13px;
     color:white;
 }
 .header {
@@ -45,14 +45,17 @@ body {
 .column {
     float: left;
     width: 33.33%;
-    height:120px;
+    height:100px;
     font-size: 13px;
     color:#f2f2f2;
     padding: 5px;
 
 }
 
-
+th{
+    text-decoration: underline;
+    color: red;
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -68,15 +71,10 @@ td, th {
     padding: 8px;
 }
 td{
-    color:black;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
+    color:yellow;
 }
 html, body{
     height: 100%;
-    background-color: #333333;
     margin: 0;
 }
 h2{
@@ -84,6 +82,7 @@ h2{
 }
 .table{
     color: #f2f2f2;
+    margin-top: 50%;
 }
 
 

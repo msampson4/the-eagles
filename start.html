@@ -22,7 +22,7 @@
             if (jsonObject.status === "OK") {
                 const start_id = jsonObject.session;
                 localStorage.setItem("session-id", start_id);
-                location.href = "App/Question.html";
+                location.href = "Question.html";
             }
             else {
                 alert("Error: " + jsonObject.errorMessages[0]);

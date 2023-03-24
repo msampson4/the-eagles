@@ -4,8 +4,8 @@
 .column {
     float: left;
     width: 33.33%;
-    height:120px;
-    font-size: 13px;
+    height:110px;
+    font-size: 15px;
     color:#f2f2f2;
     padding: 5px;
 
@@ -54,7 +54,7 @@ html, body{
     margin: 0;
 }
 .content{
-    min-height: 88.4%;
+    min-height: 89.8%;
     margin-bottom: -50px;
 }
 .button{
@@ -62,11 +62,13 @@ html, body{
     top: 65%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: red;
+
+
 }
 
 .button a{
     text-decoration: none;
+
 }
 
 footer{
@@ -81,7 +83,7 @@ footer{
 
 }
 .column p {
-    font-size: 17px;
+    font-size: 20px;
     color:white;
 }
 .content2{

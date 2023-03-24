@@ -4,8 +4,8 @@
 .column {
     float: left;
     width: 33.33%;
-    height:120px;
-    font-size: 13px;
+    height:110px;
+    font-size: 15px;
     color:#f2f2f2;
     padding: 5px;
 
@@ -73,22 +73,27 @@ p{
     border-radius: 10px;
     font-size: medium;
     width: 150px;
-    height: 100px;
+    text-align: center;
+
 }
 
 #treasureHunts a.two:link,
 #treasureHunts a.two:visited {
-    background-color: saddlebrown;
+    background-color: darkgoldenrod;
     color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     box-shadow: rgba(204, 102, 0, 0.4) -5px 5px, rgba(204, 102, 0, 0.3) -10px 10px, rgba(202, 102, 0, 0.2) -15px 15px, rgba(204, 102, 0, 0.1) -20px 20px, rgba(204, 102, 0, 0.05) -25px 25px;
 }
+#debatable{
+ margin-top: 10%;
+ display: inline-block;
+}
 
 #treasureHunts a.two:hover {
-    color: black;
-    background-color: #8B4513;
+    color: white;
+    background-color: deeppink;
 }
 
 #treasureHunts a.two:active {
@@ -97,28 +102,17 @@ p{
 }
 
 
-
-
-
-
-.explorer{
-    margin-left: 2%;
-    margin-top: 96px;
-}
  .text {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 3px rgba(0, 0, 0.3);
-    width: 200px;
-    height: 60px;
-    font-size: large;
-    color:black ;
-    text-align: center;
-    position: absolute;
-    top: 23%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
+     background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 0 3px rgba(0, 0, 0.3);
+     width: 200px;
+     height: 60px;
+     font-size: large;
+     color: black;
+     text-align: center;
+ }
+
 ul{
     list-style: none;
 }
